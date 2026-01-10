@@ -62,13 +62,13 @@ img {
 }
 
 .menu-blomst {
-  width: 120px;                 /* lidt større, matcher Figma-stil */
-  opacity: 0.08;                /* ← lysere / mere diskret */
+  width: 120px;                
+  opacity: 0.08;                
   position: absolute;
   top: 2rem;
-  right: 1rem;                  /* ← i højre side nu */
-  transform: scaleX(-1);        /* ← spejlvend */
-  pointer-events: none;         /* klik går igennem (ikke nødvendigt men lækkert) */
+  right: 1rem;                 
+  transform: scaleX(-1);       
+  pointer-events: none;         
 }
 .menu {
   position: fixed;
@@ -243,9 +243,45 @@ main {
   padding: 0.2rem 0;
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 900px) and (max-width: 1199px) {
+  .header {
+    padding: 1.2rem 2rem;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .logo img {
+    height: 46px;
+  }
+
+  .burger img {
+    width: 26px;
+    height: 26px;
+  }
+
+  .header-ikoner .ikon img {
+    width: 24px;
+    height: 24px;
+  }
+
+  .style-row {
+    max-width: 900px;
+    margin: -35rem auto 0;   /* mindre overlap på "populære" */
+    gap: 1.8rem;
+  }
+
+  .product {
+    max-width: 260px;
+  }
+}
+
+@media (min-width: 1200px) {
   .header {
     padding: 1.5rem 3rem;
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
   }
 
   .logo img {
@@ -264,7 +300,7 @@ main {
 
   .style-row {
     max-width: 1200px;
-    margin-top: -55rem;
+    margin: -55rem auto 0;  
     gap: 2.5rem;
   }
 

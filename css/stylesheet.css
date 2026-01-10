@@ -23,12 +23,13 @@ img {
 }
 
 .header {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1rem 1.5rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 1rem 1.5rem;
   position: relative;
-  z-index: 10;
 }
 
 .burger {
@@ -46,6 +47,7 @@ img {
 .logo img {
   height: 40px;
   width: auto;
+  margin-left: 70px;
 }
 
 .header-ikoner {
@@ -75,39 +77,55 @@ main {
 
 .hero-1 img,
 .hero-2 img,
-.hero-3 img,
-.hero-4 img,
 .hero-5 img,
 .hero-6 img {
   width: 100%;
   height: auto;
 }
 
+.hero-3 img,
+.hero-4 img {
+  width: auto;          /* fjerner tvungen 100% bredde */
+  max-width: 90%;       /* så det stadig skalerer på små skærme */
+  height: auto;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;   /* centrerer billedet */
+}
 
 .hero-btn {
   position: absolute;
   right: 5%;
   bottom: 8%;
-  padding: 0.7rem 1.8rem;
-  background: #ffffff;
-  color: #333333;
-  border-radius: 999px;
+  padding: 0.3rem 1rem;
+  background: transparent;
+  color: #ffffff;
   border: 1px solid #ffffff;
+  border-radius: 20px;
+  font-size: 1rem;
+  font-weight: 500;
   text-decoration: none;
-  font-size: 0.95rem;
+  display: inline-block;
+  text-align: center;
 }
 
+.hero-2 {
+  padding-bottom: 4rem;
+}
 .style-row {
-  width: 100%;
-  padding: 2rem 1.5rem 4rem;
+  max-width: 1100px;
+  margin: -20rem auto 3rem;
+  padding: 0 1.5rem;
   display: flex;
-  flex-direction: column;
-  gap: 1.5rem;
-  align-items: center;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 1rem;
+  position: relative;
+  z-index: 10;
 }
-
 .product {
-  width: 100%;
+  flex: 1;
   max-width: 320px;
 }
 
@@ -116,6 +134,26 @@ main {
   height: auto;
 }
 
+.hero-4 {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
+.hero-6 {
+  position: relative;
+  text-align: center;
+}
+
+.hero-6 .hero-btn {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 25%;
+  width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
 .site-footer {
   background: linear-gradient(#dcdcdc, #b3b3b3);
   padding: 3rem 1.5rem;
@@ -141,40 +179,32 @@ main {
   padding: 0.2rem 0;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 1024px) {
   .header {
-    padding: 1.2rem 3rem;
+    padding: 1.5rem 3rem;
   }
 
-  .hero-btn {
-    right: 8%;
-    bottom: 12%;
+  .logo img {
+    height: 52px;
+  }
+
+  .burger img {
+    width: 28px;
+    height: 28px;
+  }
+
+  .header-ikoner .ikon img {
+    width: 26px;
+    height: 26px;
   }
 
   .style-row {
-    flex-direction: row;
-    justify-content: center;
-    align-items: flex-start;
+    max-width: 1200px;
+    margin-top: -55rem;
+    gap: 2.5rem;
   }
 
   .product {
-    max-width: 260px;
-  }
-
-  .footer-columns {
-    grid-template-columns: 2fr 1fr 1fr;
-    align-items: flex-start;
-  }
-
-  .footer-col.left {
-    max-width: 420px;
-  }
-
-  .footer-col.center {
-    text-align: left;
-  }
-
-  .footer-col.right {
-    text-align: right;
+    max-width: 340px;
   }
 }

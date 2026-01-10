@@ -16,6 +16,21 @@ body {
   );
 }
 
+.skip-link {
+  position: absolute;
+  left: -999px;
+  top: 0.5rem;
+  background-color: #111;
+  color: #ffffff;
+  padding: 0.5rem 1rem;
+  z-index: 1100;
+  text-decoration: none;
+}
+
+.skip-link:focus-visible {
+  left: 0.5rem;
+}
+
 img {
   display: block;
   max-width: 100%;
@@ -37,6 +52,8 @@ img {
   border: none;
   padding: 0;
   cursor: pointer;
+  display: block;     
+  text-decoration: none; 
 }
 
 .burger img {
@@ -94,15 +111,14 @@ img {
   flex-direction: column;
 }
 .menu-close {
-  position: absolute;
-  top: 1.2rem;
-  left: 1.2rem;       
   background: none;
   border: none;
-  color: #ffffff;
-  font-size: 1.5rem;
-  cursor: pointer;       
+  font-size: 2rem;
+  cursor: pointer;
+  color: #ffffff;     
+  text-decoration: none;
 }
+
 .menu-links {
   margin-top: 8rem; 
   display: flex;
@@ -123,10 +139,6 @@ img {
 
 .menu-links a:hover {
   text-decoration: underline;
-}
-
-main {
-  width: 100%;
 }
 
 .hero-1,
@@ -187,10 +199,6 @@ main {
 
 .hero-2 .hero-btn {
   bottom: 25%;   
-}
-
-.hero-2 > img {
-  display: block;
 }
 
 .style-row {
@@ -271,10 +279,6 @@ main {
     margin: 0 auto;
   }
 
-  .logo img {
-    height: 70px;          
-  }
-
   .burger img {
     width: 40px;
     height: 40px;          
@@ -344,10 +348,6 @@ main {
   .hero-3 img{
   margin-top: -15rem;
  }
-  .product {
-    max-width: 360px;          
-  }
-
   .hero-btn {
     font-size: 1.2rem;         
     padding: 0.6rem 1.8rem;

@@ -61,6 +61,54 @@ img {
   height: 22px;
 }
 
+.menu {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.menu-open {
+  display: flex;
+}
+
+.menu-inner {
+  width: 80%;
+  max-width: 340px;
+  height: 85%;
+  background-color: #3f3f3f;
+  padding: 2rem 2.5rem;
+  position: relative;
+  color: #ffffff;
+}
+
+.menu-close {
+  position: absolute;
+  top: 1.5rem;
+  right: 1.5rem;
+  background: none;
+  border: none;
+  color: #ffffff;
+  font-size: 1.4rem;
+  cursor: pointer;
+}
+
+.menu-links {
+  display: flex;
+  flex-direction: column;
+  gap: 1.8rem;
+  margin-top: 3rem;
+}
+
+.menu-links a {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 1.1rem;
+}
+
 main {
   width: 100%;
 }
